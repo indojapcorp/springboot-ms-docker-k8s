@@ -51,13 +51,13 @@ jobs:
   #    run: |
   #      docker push indojapcorp/knote-java:${{needs.build.outputs.jar_version}}
 
-  run:
-      runs-on: fabric8/java-alpine-openjdk11-jre:1.9.0
-      needs: [build, deploy]
+  #run:
+  #    runs-on: fabric8/java-alpine-openjdk11-jre:1.9.0
+  #    needs: [build, deploy]
 
-      steps:
-        - name: Run container
-          run: |
-            docker run indojapcorp/knote-java:${{needs.build.outputs.jar_version}}
+  #    steps:
+  #      - name: Run container
+  #        run: |
+  #          docker run indojapcorp/knote-java:${{needs.build.outputs.jar_version}}
 
       
