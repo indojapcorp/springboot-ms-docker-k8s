@@ -1,4 +1,4 @@
-FROM fabric8/java-alpine-openjdk11-jre:1.9.0
+FROM fabric8/java-alpine-openjdk11-jre:1.9.0 as build
 WORKDIR /opt
 ENV PORT 8080
 COPY --from=build /opt/target/*.jar /opt/app.jar
